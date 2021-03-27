@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+
+    <script>
+        
+    songs = [];
+    
+    $(document).ready(function() 
+        {
+            // Display the products.
+            function display() {
+                songDis = "";
+                for (i in songs) {
+                    songDis += "<div class='song'>";
+                    songDis += "<div class='title'>" + songs[i].title + "</div>";
+                    songDis += "<div class='artist'>" + songs[i].artist + "</div>";
+                    songDis += "<div class='genre'>" + songs[i].genre + "</div>";
+                    songDis += "<div class='year'>" + songs[i].year + "</div>";
+                    songDis += "</div>";
+                }
+                $("#songsNeat").html(songDis);
+            }
+            
+            // Get the product information from JSON file.
+            $.getJSON("JSONsongs.json", 
+            function(data) 
+            {
+                $("#songsRaw").html(JSON.stringify(data));
+                data.forEach(function(song) 
+                {
+                    songs.push(song);
+                });
+              display();
+            });
+
+         $("#genreFilter").change(function() {
+            option = $(this).find("option:selected").html();
+            $("#songsNeat").children().show();
+            if (option == "All"){
+                return;
+//                
+            }else{
+                $("#songsRaw").hide();
+                $("#rawTitle").hide();
+                $("#neatTitle").hide();
+            }
+            $(".genre").each(function() {
+                string = $(this).html()
+                thisGenre = string.substring(string.indexOf(":") + 2);
+                if (thisGenre == option){
+                   $(this).parent().show(); 
+                }else{
+                  $(this).parent().hide();  
+                } 
+            });
+         });
+   });
+//    
+   </script> 
+    <style>
+        
+        p{
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        div{
+            text-align: center;
+        }
+    
+        .song{
+            align-content: center;
+            padding: 10px;
+            
+        }
+    
+    </style>
+    </head>
+    
+    
+<body>
+    
+    <form>
+        <label>Filter by Genre: </label> 
+        <select  id="genreFilter">
+            <option value = "All">All</option>
+            <option value = "Rap">Rap</option> 
+            <option value = "Pop">Pop</option>
+            <option value = "Rock">Rock</option>
+            <option value = "Indie Pop">Indie Pop</option>
+            <option value = "EDM">EDM</option>
+            
+        </select>
+    </form>
+    <div id = "check"></div>
+    <p id="rawTitle"> <strong> This is the raw string of the data: </strong></p>
+    <div id = "songsRaw"> 
+    </div>
+    <p id="neatTitle"> <strong> This is the neat version of the data: </strong></p>
+    <div id = "songsNeat">
+    
+    </div>
+    
+</body>
+
+
+
+
+</html>

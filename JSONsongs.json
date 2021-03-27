@@ -1,0 +1,63 @@
+[
+    {
+        "title":"Ventetia" ,
+        "artist": "Artist: Lil Uzi Vert",
+        "genre": "Genre: Rap",
+        "year": "Released: 2020"
+        
+    },
+    {
+        "title":"Won't Let Go" ,
+        "artist": "Artist: Juice Wrld",
+        "genre": "Genre: Rap",
+        "year": "Released: 2019"
+    },
+    {
+        "title":"Red Lights" ,
+        "artist": "Artist: Tiesto",
+        "genre": "Genre: EDM",
+        "year": "Released: 2014"
+    },
+    {
+        "title":"Heart In Pieces" ,
+        "artist": "Artist: Lil Uzi Vert",
+        "genre": "Genre: Rap",
+        "year": "Released: 2020"
+    },
+    {
+        "title":"Saint-Tropez" ,
+        "artist": "Artist: Post Malone",
+        "genre": "Genre: Pop",
+        "year": "Released: 2019"
+    },
+    {
+        "title":"Shot In The Dark" ,
+        "artist": "Artist: AC-DC",
+        "genre": "Genre: Rock",
+        "year": "Released: 1986"
+    },
+    {
+        "title":"Don't Stop Believin'" ,
+        "artist": "Artist: Journey",
+        "genre": "Genre: Rock",
+        "year": "Released: 1981"
+    },
+    {
+        "title":"'Till I Collapse" ,
+        "artist": "Artist: Eminem",
+        "genre": "Genre: Rap",
+        "year": "Released: 2002"
+    },
+    {
+        "title":"Next Up Forever" ,
+        "artist": "Artist: AJR",
+        "genre": "Genre: Indie Pop",
+        "year": "Released: 2019"
+    },
+    {
+        "title":"Need It" ,
+        "artist": "Artist: Migos",
+        "genre": "Genre: Rap",
+        "year": "Released: 2020"
+    }
+]
